@@ -1,0 +1,1 @@
+/home/namako/.zprezto/runcoms/zshenv
