@@ -38,7 +38,10 @@ alias dirs='dirs -v'
 # Applicaton
 ################################################
 
-alias vi=vim
+#alias vi=vim
+alias vi=nvim
 alias gvi=gvim
 
 alias python=python3
+
+alias d=less

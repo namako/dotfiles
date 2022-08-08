@@ -1,4 +1,5 @@
-export LANG=ja_JP.utf8
+#export LANG=ja_JP.utf8
+export LANG=C
 umask 002
 # history opt
 setopt hist_ignore_space
@@ -64,10 +65,10 @@ bindkey -v
 
 # menuselect
 bindkey '^R' history-incremental-pattern-search-backward
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
+#bindkey -M menuselect 'h' vi-backward-char
+#bindkey -M menuselect 'j' vi-down-line-or-history
+#bindkey -M menuselect 'k' vi-up-line-or-history
+#bindkey -M menuselect 'l' vi-forward-char
 
 # vim mode customize
 bindkey -M viins '\er' history-incremental-pattern-search-forward
