@@ -44,7 +44,7 @@ set infercase
 " color theme
 syntax enable
 set background=dark
-set termguicolors
+"set termguicolors
 "colorscheme molokai
 "colorscheme solarized
 colorscheme NeoSolarized

@@ -6,3 +6,5 @@ if {[ -f ~/dotfiles/.zsh/20_aliases.zsh ]}; then
 fi
 
 . "$HOME/.cargo/env"
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
