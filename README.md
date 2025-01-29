@@ -1,4 +1,8 @@
-namako's dotfiles
+## namako's dotfiles
 
-dotfiles
+The dotfiles include dotfiles for the following application.
 
+- zsh
+- vim (neovim)
+- tmux
+- Alacritty
