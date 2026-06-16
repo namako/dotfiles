@@ -1,10 +1,31 @@
--- vimrc_trans.lua
--- Takuya.Usami@sony.com
--- Translated from .vimrc (ver.20171020) for Neovim
+-- init.lua
+-- namakotti@gmail.com
+-- last update: 2026/6/16
 
 local opt = vim.opt
 local g = vim.g
 local map = vim.keymap.set
+
+-----------------------------------------------------
+-- For plugin
+-----------------------------------------------------
+-- lazy.nvim bootstrap
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- plugin settings
+require("lazy").setup({
+  { "ishan9299/nvim-solarized-lua" },
+  { "projekt0n/github-nvim-theme" },
+})
 
 -----------------------------------------------------
 -- vim normal config
@@ -49,9 +70,8 @@ opt.infercase = true
 vim.cmd("syntax enable")
 opt.background = "dark"
 -- opt.termguicolors = true
--- vim.cmd("colorscheme molokai")
--- vim.cmd("colorscheme solarized")
-vim.cmd("colorscheme NeoSolarized")
+vim.cmd("colorscheme solarized")
+vim.cmd("colorscheme github_dark")
 
 opt.modeline = true
 opt.modelines = 5
@@ -125,7 +145,22 @@ local function get_highlight(hi)
   local hl = vim.api.nvim_exec2("highlight " .. hi, { output = true }).output
   hl = hl:gsub("[\r\n]", "")
   hl = hl:gsub("xxx", "")
-  return hl
+ -- lazy.nvim bootstrap
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- プラグイン設定
+require("lazy").setup({
+  { "ishan9299/nvim-solarized-lua" },
+}) return hl
 end
 
 local function status_line(mode)
@@ -147,3 +182,4 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   group = insert_hook,
   callback = function() status_line("Leave") end,
 })
+
