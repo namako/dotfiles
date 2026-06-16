@@ -46,7 +46,7 @@ set background=dark
 "set termguicolors
 "colorscheme molokai
 "colorscheme solarized
-colorscheme NeoSolarized
+"colorscheme NeoSolarized
 
 
 set modeline
