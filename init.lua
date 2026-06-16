@@ -7,7 +7,7 @@ local g = vim.g
 local map = vim.keymap.set
 
 -----------------------------------------------------
--- For plugin
+-- Plugin
 -----------------------------------------------------
 -- lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -25,6 +25,36 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "ishan9299/nvim-solarized-lua" },
   { "projekt0n/github-nvim-theme" },
+  -- filer
+  {
+      "nvim-tree/nvim-tree.lua",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  -- syntax highlight
+  {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+  },
+  -- status line
+  {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+})
+
+-- nvim-tree
+require("nvim-tree").setup()
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")  -- Ctrl+nで開閉
+
+-- treesitter
+require("nvim-treesitter").setup({
+  ensure_installed = { "lua", "python", "javascript" },  -- 必要な言語追加
+  highlight = { enable = true },
+})
+
+-- lualine
+require("lualine").setup({
+  options = { theme = "auto" }
 })
 
 -----------------------------------------------------
