@@ -175,22 +175,6 @@ local function get_highlight(hi)
   local hl = vim.api.nvim_exec2("highlight " .. hi, { output = true }).output
   hl = hl:gsub("[\r\n]", "")
   hl = hl:gsub("xxx", "")
- -- lazy.nvim bootstrap
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git", "clone", "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
--- プラグイン設定
-require("lazy").setup({
-  { "ishan9299/nvim-solarized-lua" },
-}) return hl
 end
 
 local function status_line(mode)
