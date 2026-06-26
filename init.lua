@@ -1,6 +1,6 @@
 -- init.lua
 -- namakotti@gmail.com
--- last update: 2026/6/16
+-- last update: 2026/6/26
 
 local opt = vim.opt
 local g = vim.g
@@ -177,23 +177,23 @@ local function get_highlight(hi)
   hl = hl:gsub("xxx", "")
 end
 
-local function status_line(mode)
-  if mode == "Enter" then
-    slhlcmd = "highlight " .. get_highlight("StatusLine")
-    vim.cmd(g.hi_insert)
-  else
-    vim.cmd("highlight clear StatusLine")
-    vim.cmd(slhlcmd)
-  end
-end
+--local function status_line(mode)
+--  if mode == "Enter" then
+--    slhlcmd = "highlight " .. get_highlight("StatusLine")
+--    vim.cmd(g.hi_insert)
+--  else
+--    vim.cmd("highlight clear StatusLine")
+--    vim.cmd(slhlcmd)
+--  end
+--end
 
-local insert_hook = vim.api.nvim_create_augroup("InsertHook", { clear = true })
-vim.api.nvim_create_autocmd("InsertEnter", {
-  group = insert_hook,
-  callback = function() status_line("Enter") end,
-})
-vim.api.nvim_create_autocmd("InsertLeave", {
-  group = insert_hook,
-  callback = function() status_line("Leave") end,
-})
-
+-- local insert_hook = vim.api.nvim_create_augroup("InsertHook", { clear = true })
+-- vim.api.nvim_create_autocmd("InsertEnter", {
+--   group = insert_hook,
+--   callback = function() status_line("Enter") end,
+-- })
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+--   group = insert_hook,
+--   callback = function() status_line("Leave") end,
+-- })
+-- 
