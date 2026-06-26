@@ -1,8 +1,14 @@
 ## namako's dotfiles
 
-The dotfiles include dotfiles for the following application.
+The dotfiles include settings for the following applications.
 
 - zsh
 - vim (neovim)
 - tmux
-- Alacritty
+- ghostty
+
+The following commandline applications required for the configuration.
+
+- fd
+- bat
+- eza
