@@ -55,3 +55,6 @@ alias gvi=gvim
 alias python=python3
 
 alias d=less
+
+alias cat=bat
+alias ls=eza
