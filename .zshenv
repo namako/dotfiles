@@ -3,8 +3,8 @@ if {[ -f ~/dotfiles/.zsh/20_aliases.zsh ]}; then
     source ~/dotfiles/.zsh/20_aliases.zsh
 fi
 
-if {[ -f ~/dotfiles/.zsh/10_config.csh ]}; then
-    source ~/dotfiles/.zsh/20_aliases.zsh
+if {[ -f ~/dotfiles/.zsh/10_config.zsh ]}; then
+    source ~/dotfiles/.zsh/10_config.zsh
 fi
 
 
