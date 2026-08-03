@@ -15,6 +15,7 @@ export LANG=ja_JP.utf-8
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin/git:$PATH"
+export PATH="/Applications/klayout.app/Contents/MacOS/:$PATH"
 
 umask 002
 
