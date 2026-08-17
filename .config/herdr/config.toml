@@ -1,0 +1,13 @@
+[theme]
+name = "catppuccin"
+auto_switch = true
+
+[terminal]
+default_shell = "/bin/zsh"
+
+[keys]
+prefix = "ctrl+t"
+split_vertical = "prefix+\\"
+
+[ui]
+mouse_capture = true
