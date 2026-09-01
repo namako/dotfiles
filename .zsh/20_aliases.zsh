@@ -9,15 +9,15 @@ export LANG=C
 # COMMON
 ################################################
 # Common aliases
-alias ls='eza --icons=auto'
+alias ls='eza --icons=auto --group-directories-first'
 alias la='eza --icons=auto -AF'
-alias ll='eza --icons=auto -lA'
+alias ll='eza --icons=auto --group-directories-first --git -la'
 alias ld='eza --icons=auto -ld'
 alias lx='eza --icons=auto -lXB'
 alias lk='eza --icons=auto -lSr'
 alias lc='eza --icons=auto -ltcr'
 alias lu='eza --icons=auto -ltur'
-alias lt='eza --icons=auto -ltr'
+alias lt='eza --icons=auto --tree --level=2'
 alias lr='eza --icons=auto -lR'
 #alias ls='ls --color'
 #alias la='ls -AF'
