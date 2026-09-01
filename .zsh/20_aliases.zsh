@@ -9,16 +9,16 @@ export LANG=C
 # COMMON
 ################################################
 # Common aliases
-alias ls='lsd'
-alias la='lsd -AF'
-alias ll='lsd -lA'
-alias ld='lsd -ld'
-alias lx='lsd -lXB'
-alias lk='lsd -lSr'
-alias lc='lsd -ltcr'
-alias lu='lsd -ltur'
-alias lt='lsd -ltr'
-alias lr='lsd -lR'
+alias ls='eza'
+alias la='eza -AF'
+alias ll='eza -lA'
+alias ld='eza -ld'
+alias lx='eza -lXB'
+alias lk='eza -lSr'
+alias lc='eza -ltcr'
+alias lu='eza -ltur'
+alias lt='eza -ltr'
+alias lr='eza -lR'
 #alias ls='ls --color'
 #alias la='ls -AF'
 #alias ll='ls -lA'
@@ -57,4 +57,3 @@ alias python=python3
 alias d=less
 
 alias cat=bat
-alias ls=eza
