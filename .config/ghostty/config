@@ -12,7 +12,7 @@ font-thicken = true
 # ==============================
 
 #theme = Solarized Dark Patched
-theme = tokyonight
+theme = TokyoNight
 
 # ==============================
 # window settings
@@ -42,7 +42,7 @@ macos-option-as-alt = true
 # performance settings
 # ==============================
 
-scrollback-limit = 100000
+scrollback-limit-lines = 100000
 
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2

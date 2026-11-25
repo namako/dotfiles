@@ -4,8 +4,6 @@
 
 export LANG=ja_JP.UTF-8
 
-umask 002
-
 # Remove duplicate PATH entries automatically
 typeset -U path PATH
 path=(

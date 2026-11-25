@@ -20,7 +20,8 @@ git clone https://github.com/namako/dotfiles.git ~/dotfiles   # any location wor
 1. Install Homebrew (if missing) and run `brew bundle`
 2. Install Oh My Zsh and its plugins
 3. Symlink the files below into `$HOME`
-   (existing files are moved to `~/.dotfiles_backup/<timestamp>/`)
+   (existing files are moved to `~/.dotfiles_backup/<timestamp>.XXXXXX/`,
+   and moved back if the link cannot be created)
 
 To only (re)create the symlinks: `./install.sh --no-brew`
 

@@ -23,8 +23,6 @@ set showmatch
 set ignorecase
 set hidden
 set shiftwidth=4
-set helplang=en
-set expandtab
 
 " History size
 set history=10000
@@ -45,8 +43,6 @@ syntax enable
 set background=dark
 "set termguicolors
 "colorscheme molokai
-"colorscheme solarized
-"colorscheme NeoSolarized
 
 
 set modeline
@@ -63,7 +59,6 @@ set smarttab
 set noequalalways
 
 "2016/10/06 appended
-set smarttab
 set clipboard=unnamed
 
 

@@ -20,6 +20,9 @@ source "$ZSH/oh-my-zsh.sh"
 # -----------------------------------------------
 # Options (on top of the Oh My Zsh defaults)
 # -----------------------------------------------
+# new files group-writable (interactive shells only, not scripts)
+umask 002
+
 # history (HISTFILE / SAVEHIST are set by Oh My Zsh)
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
