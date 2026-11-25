@@ -57,6 +57,7 @@ DOTFILES="${${(%):-%x}:A:h}"
 # Auto ls on cd
 # -----------------------------------------------
 ls_abbrev() {
+    [[ -t 1 ]] || return 0   # skip when output is a pipe / command substitution
     local ls_result
     if (( $+commands[eza] )); then
         ls_result=$(command eza -a --grid --width="$COLUMNS" --color=always --icons=auto --group-directories-first .)

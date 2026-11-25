@@ -1,7 +1,5 @@
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
-# Microsoft Azure CLI 2.0
-brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Get a file from an HTTP, HTTPS or FTP server
