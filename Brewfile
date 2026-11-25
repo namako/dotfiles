@@ -18,26 +18,28 @@ brew "git"
 brew "herdr"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Clone of ls with colorful output, file type icons, and more
-brew "lsd"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Terminal multiplexer
 brew "tmux"
+# Parser generator tool (required by nvim-treesitter main branch)
+brew "tree-sitter-cli"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Internet file retriever
 brew "wget"
-# Fish-like fast/unobtrusive autosuggestions for zsh
-brew "zsh-autosuggestions"
-# Fish shell like syntax highlighting for zsh
-brew "zsh-syntax-highlighting"
+# Google Cloud SDK
+cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Customize mouse and trackpad behavior
+cask "linearmouse"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Code editor (also provides the `code` CLI used by the vscode entries below)
+cask "visual-studio-code"
 vscode "anthropic.claude-code"
 vscode "bokuweb.vscode-ripgrep"
 vscode "charliermarsh.ruff"

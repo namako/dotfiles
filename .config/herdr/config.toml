@@ -1,5 +1,7 @@
+onboarding = false
 [theme]
-name = "catppuccin"
+#name = "catppuccin"
+name = "terminal"
 auto_switch = true
 
 [terminal]
@@ -8,6 +10,8 @@ default_shell = "/bin/zsh"
 [keys]
 prefix = "ctrl+t"
 split_vertical = "prefix+\\"
+previous_workspace = "prefix+["
+next_workspace = "prefix+]"
 
 [ui]
 mouse_capture = true

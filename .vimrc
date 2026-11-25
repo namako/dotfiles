@@ -86,7 +86,8 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " normal mode ENTER
-noremap <CR> A<CR><ESCsj
+" (skip in quickfix/help etc. so <CR> still jumps there)
+nnoremap <expr> <CR> &buftype ==# '' ? 'A<CR><ESC>j' : '<CR>'
 
 " full path map
 inoremap <Leader>path <C-R>=expand('%:p')<CR>

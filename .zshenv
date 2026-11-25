@@ -1,21 +1,15 @@
-# Read alias settings
-if {[ -f ~/dotfiles/.zsh/20_aliases.zsh ]}; then
-    source ~/dotfiles/.zsh/20_aliases.zsh
-fi
+# ~/.zshenv
+# Read by EVERY zsh (scripts and non-interactive shells too).
+# Keep this to environment variables only; aliases and options go in .zshrc.
 
-if {[ -f ~/dotfiles/.zsh/10_config.zsh ]}; then
-    source ~/dotfiles/.zsh/10_config.zsh
-fi
-
-
-#export LANG=C
-export LANG=ja_JP.utf-8
-
-# Env settings
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/opt/homebrew/bin/git:$PATH"
-export PATH="/Applications/klayout.app/Contents/MacOS/:$PATH"
+export LANG=ja_JP.UTF-8
 
 umask 002
 
+# Remove duplicate PATH entries automatically
+typeset -U path PATH
+path=(
+    "$HOME/.local/bin"
+    /Applications/klayout.app/Contents/MacOS
+    $path
+)

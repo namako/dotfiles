@@ -39,7 +39,7 @@ macos-titlebar-style = tabs
 macos-option-as-alt = true
 
 # ==============================
-# paformance settings
+# performance settings
 # ==============================
 
 scrollback-limit = 100000
